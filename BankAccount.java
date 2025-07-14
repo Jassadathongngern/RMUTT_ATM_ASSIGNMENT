@@ -1,8 +1,8 @@
 public class BankAccount {
-    private String accountId;    // Account ID, 13 characters
-    private String accountName;  // Account holder's name, max 50 characters
-    private String password;     // Password, 4 characters
-    private double balance;      // Account balance, max 1,000,000 Baht
+    private String accountId;    
+    private String accountName; 
+    private String password;     
+    private double balance;      
 
     public BankAccount(String accountId, String accountName, String password, double balance) {
         this.accountId = accountId;
@@ -11,7 +11,6 @@ public class BankAccount {
         this.balance = balance;
     }
 
-    // Getters
     public String getAccountId() {
         return accountId;
     }
@@ -24,12 +23,10 @@ public class BankAccount {
         return balance;
     }
 
-    // Check if the password matches
     public boolean checkPassword(String inputPassword) {
         return this.password.equals(inputPassword);
     }
 
-    // Withdraw money if the balance is sufficient
     public boolean withdraw(double amount) {
         if(amount > 0 && amount <= balance) {
             balance -= amount;
